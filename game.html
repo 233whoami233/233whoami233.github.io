@@ -1,3 +1,25 @@
 <html>
         <button type="button">Get 1 Red Problems</button>
         <input id="button",type="botton",value="按钮">
+        <input type=button name=test onclick='checkWho(this)' value='click me'>
+        <input type=button name=test onclick='checkWho(this)' value='click me'>
+        <input type=button name=test onclick='checkWho(this)' value='click me'>
+        <input type=button name=test onclick='checkWho(this)' value='click me'>
+        <input type=button name=test onclick='checkWho(this)' value='click me'>
+        <input type=button name=test onclick='checkWho(this)' value='click me'>
+        <input type=button name=test onclick='checkWho(this)' value='click me'>
+        <input type=button name=test onclick='checkWho(this)' value='click me'>
+        <input type=button name=test onclick='checkWho(this)' value='click me'>
+        <input type=button name=test onclick='checkWho(this)' value='click me'>
+        <input type=button name=test onclick='checkWho(this)' value='click me'>
+        <input type=button name=test onclick='checkWho(this)' value='click me'>
+        <script>
+        function checkWho(it){
+        o=document.all("test");
+                for(i=0;i<o.length;i++){
+                        if(it.sourceIndex==o[i].sourceIndex){
+                                alert("i am is the "+i+1);
+                        }
+                }
+        }
+        </script>
