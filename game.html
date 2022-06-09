@@ -1,25 +1,12 @@
 <html>
-        <button type="button">Get 1 Red Problems</button>
-        <input id="button",type="botton",value="按钮">
-        <input type=button name=test onclick='checkWho(this)' value='click me'>
-        <input type=button name=test onclick='checkWho(this)' value='click me'>
-        <input type=button name=test onclick='checkWho(this)' value='click me'>
-        <input type=button name=test onclick='checkWho(this)' value='click me'>
-        <input type=button name=test onclick='checkWho(this)' value='click me'>
-        <input type=button name=test onclick='checkWho(this)' value='click me'>
-        <input type=button name=test onclick='checkWho(this)' value='click me'>
-        <input type=button name=test onclick='checkWho(this)' value='click me'>
-        <input type=button name=test onclick='checkWho(this)' value='click me'>
-        <input type=button name=test onclick='checkWho(this)' value='click me'>
-        <input type=button name=test onclick='checkWho(this)' value='click me'>
-        <input type=button name=test onclick='checkWho(this)' value='click me'>
-        <script>
-        function checkWho(it){
-        o=document.all("test");
-                for(i=0;i<o.length;i++){
-                        if(it.sourceIndex==o[i].sourceIndex){
-                                alert("i am is the "+i+1);
-                        }
-                }
+<input type=" button" value="判断点击" onclick="CheckClk()"/>
+<script type="text/javascript">
+function CheckClk(){
+        if (clkBool) {
+                alert("按钮已经点击过");//弹出警告框
         }
-        </script>
+        else{//如果不满足if的条件
+                alert("按钮未被点击");//弹出警告框
+        }
+}
+</script>
