@@ -5,8 +5,8 @@
                      var num=[0.0,0.0,0.0,0.0];
 		     var cost=[10.0,80.0,0.0];
 		     var armynum=[0];
-		     var armycost1=[1];
-		     var armycost2=[10];
+		     var armycost1=[10.0];
+		     var armycost2=[1000.0];
 		     var bring=[1.0,10.0,0.0];
                      function cl1()
                      {
@@ -40,8 +40,8 @@
 				    num[2]-=armycost1[0];
 				    num[0]-=armycost2[0];
 				    armynum[0]++;
-				    armycost1[0]+=1;
-				    armycost2[0]+=10;
+				    armycost1[0]*=1.2;
+				    armycost2[0]*=1.2;
 			    }
                             upd();
                      }
@@ -92,7 +92,7 @@
 	       <h2>战斗</h2>
 	       <p>你有:</p><p id="army1">0</p><p> 个战斗细菌。</p><br>
 	       <button onclick="cl4()">合成一个战斗细菌</button><br>
-	       <p>你需要 </p><p id="aca1">1</p><p> 个腐烂的苹果以及 </p><p id="acb1">10</p><p> 个细菌来合成一个战斗细菌。</p><br>
+	       <p>你需要 </p><p id="aca1">10</p><p> 个腐烂的苹果以及 </p><p id="acb1">1000</p><p> 个细菌来合成一个战斗细菌。</p><br>
 	       <script>
 		       setInterval(function() {
 			       pl();
