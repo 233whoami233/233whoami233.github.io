@@ -2,7 +2,8 @@
        <head>
               <title>Bacteria</title>
               <script>
-                     var num[10]={0,0,0,0,0,0,0,0,0,0};
+                     var num=[0.0,0.0];
+		     var cost=[10.0];
                      function cl1()
                      {
                             num[0]+=(1+num[1]*2);
@@ -10,13 +11,19 @@
                      }
 		     function cl2()
                      {
-                            num[1]+=1;
+                            if(num[0]>cost[0])
+			    {
+				    num[1]+=1;
+				    num[0]-=cost[0];
+				    cost[0]*=1.01;
+			    }
                             upd();
                      }
                      function upd()
 		     {
 			     document.getElementById("score1").innerHTML=num[0];
 			     document.getElementById("score2").innerHTML=num[1];
+			     document.getElementById("cost1").innerHTML=cost[0];
                      }
               </script>
        </head>
@@ -25,6 +32,7 @@
                <button onclick="cl1()">获取一个细菌</button>
 	       
 	       <p>你有:</p><p id="score2">0</p><p> 个培养皿。</p>
-	       <button onclick="cl2()">获取一个细菌</button>
+	       <button onclick="cl2()">获取一个培养皿</button>
+	       <p>需要花费</p><p id="cost1">10</p><p>个细菌。</p>
        </body>
 </html>
