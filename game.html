@@ -6,7 +6,7 @@
 		     var cost=[10.0];
                      function cl1()
                      {
-                            num[0]+=(1+num[1]);
+                            num[0]+=1;
                             upd();
                      }
 		     function cl2()
@@ -19,6 +19,12 @@
 			    }
                             upd();
                      }
+		     function pl()
+		     {
+			    num[0]+=num[1];
+			    upd();
+		     }
+		     setInterval(pl(),1000);
                      function upd()
 		     {
 			     document.getElementById("score1").innerHTML=num[0];
