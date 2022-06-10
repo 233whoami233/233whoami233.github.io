@@ -2,21 +2,29 @@
        <head>
               <title>Bacteria</title>
               <script>
-                     var num=0;
-                     function cl()
+                     var num[10]={0,0,0,0,0,0,0,0,0,0};
+                     function cl1()
                      {
-                            num+=1;
+                            num[0]+=(1+num[1]*2);
+                            upd();
+                     }
+		     function cl2()
+                     {
+                            num[1]+=1;
                             upd();
                      }
                      function upd()
 		     {
-				document.getElementById("score").innerHTML=num;
+			     document.getElementById("score1").innerHTML=num[0];
+			     document.getElementById("score2").innerHTML=num[1];
                      }
               </script>
        </head>
        <body>
-	       <br>
-               <p>你有:</p><p id="score">0</p><p> 个细菌。</p><br>
-               <button onclick="cl()">获取一个细菌</button><br>
+               <p>你有:</p><p id="score1">0</p><p> 个细菌。</p>
+               <button onclick="cl1()">获取一个细菌</button>
+	       
+	       <p>你有:</p><p id="score2">0</p><p> 个培养皿。</p>
+	       <button onclick="cl2()">获取一个细菌</button>
        </body>
 </html>
