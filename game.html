@@ -3,11 +3,11 @@
               <title>细菌</title>
               <script>
                      var num=[0.0,0.0,0.0,0.0];
-		     var cost=[10.0,80.0,0.0];
+		     var cost=[10.0,80.0,5.0];
 		     var armynum=[0];
 		     var armycost1=[10.0];
 		     var armycost2=[1000.0];
-		     var bring=[1.0,10.0,0.0];
+		     var bring=[1.0,10.0,100.0];
                      function cl1()
                      {
                             num[0]+=1;
@@ -45,6 +45,15 @@
 			    }
                             upd();
                      }
+		     function cl5()
+                     {
+                            if(armynum[0]>=cost[2])
+			    {
+				    armynum[0]--=cost[2];
+				    num[3]++;
+			    }
+                            upd();
+                     }
 		     function pl()
 		     {
 			    num[0]+=num[1];
@@ -56,10 +65,13 @@
 			     document.getElementById("score1").innerHTML=num[0];
 			     document.getElementById("score2").innerHTML=num[1];
 			     document.getElementById("score3").innerHTML=num[2];
+			     document.getElementById("score4").innerHTML=num[3];
 			     document.getElementById("cost1").innerHTML=cost[0];
 			     document.getElementById("cost2").innerHTML=cost[1];
+			     document.getElementById("cost3").innerHTML=cost[2];
 			     document.getElementById("num1").innerHTML=bring[0];
 			     document.getElementById("num2").innerHTML=bring[1];
+			     document.getElementById("num3").innerHTML=bring[2];
 			     document.getElementById("army1").innerHTML=armynum[0];
 			     document.getElementById("aca1").innerHTML=armycost1[0];
 			     document.getElementById("acb1").innerHTML=armycost2[0];
@@ -87,6 +99,10 @@
 	       <p>每个腐烂的苹果上每秒可以生长 </p><p id="num2">10</p><p> 个细菌。</p><br>
 	       <br>
 	       <br>
+	       <p>你有:</p><p id="score4">0</p><p> 个松鼠的尸体。</p><br>
+	       <button onclick="cl5()">进攻一只松鼠</button><br>
+	       <p>你需要 </p><p id="cost3">5</p><p> 个战斗细菌来进攻并让其死亡。</p><br>
+	       <p>每个松鼠的尸体上每秒可以生长 </p><p id="num3">100</p><p> 个细菌。</p><br>
 	       <br>
 	       <br>
 	       <h2>战斗</h2>
