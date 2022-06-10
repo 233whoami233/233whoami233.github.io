@@ -29,7 +29,7 @@
 			    {
 				    num[2]+=1;
 				    num[0]-=cost[1];
-				    cost[1]*=1.5;
+				    cost[1]*=1.01;
 			    }
                             upd();
                      }
@@ -38,6 +38,7 @@
                             if(num[0]>=armycost2[0]&&num[2]>=armycost1[0])
 			    {
 				    num[2]-=armycost1[0];
+				    for(var i=0;i<10;i++)cost[1]/=1.01;
 				    num[0]-=armycost2[0];
 				    armynum[0]++;
 			    }
