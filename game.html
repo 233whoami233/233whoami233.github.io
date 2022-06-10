@@ -5,8 +5,8 @@
                      var num=[0.0,0.0,0.0,0.0];
 		     var cost=[10.0,80.0,0.0];
 		     var armynum=[0];
-		     var armycost1=[1.0];
-		     var armycost2=[10.0];
+		     var armycost1=[1];
+		     var armycost2=[10];
 		     var bring=[1.0,10.0,0.0];
                      function cl1()
                      {
@@ -39,6 +39,7 @@
 			    {
 				    num[2]-=armycost1[0];
 				    num[0]-=armycost2[0];
+				    armynum[0]++;
 				    armycost1[0]+=1;
 				    armycost2[0]+=10;
 			    }
