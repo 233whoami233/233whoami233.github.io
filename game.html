@@ -8,6 +8,7 @@
 		     var armycost1=[10.0];
 		     var armycost2=[1000.0];
 		     var bring=[1.0,10.0,100.0];
+		     var exp=[false];
                      function cl1()
                      {
                             num[0]+=1;
@@ -53,6 +54,15 @@
 			    }
                             upd();
                      }
+		     function clck1()
+		     {
+			    if(num[2]>=50){
+				    num[2]-=50;
+				    exp[0]=true;
+				    document.getElementByid("1").style.display="none";
+			    }
+			    upd();
+		     }
 		     function pl()
 		     {
 			    num[0]+=num[1];
@@ -113,5 +123,12 @@
 			       pl();
 		       } ,1000);
 	       </script>
+	       <br>
+	       <br>
+	       <h2>研究</h2>
+	       <p>伐木</p>
+	       <p>细菌具有很强的腐蚀性，我们可以利用这一特性进行伐木。</p><br>
+	       <p>你需要 50 个腐烂的苹果进行研究。</p>
+	       <button onclick="clck1()" id="1">研究</button>
        </body>
 </html>
