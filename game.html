@@ -1,12 +1,15 @@
 <html>
-<button type="button",onclick="CheckClk()">Click Me!</button>
-<script type="text/javascript">
-function CheckClk(){
-        if (clkBool) {
-                alert("按钮已经点击过");//弹出警告框
-        }
-        else{//如果不满足if的条件
-                alert("按钮未被点击");//弹出警告框
-        }
-}
-</script>
+       <title>细菌大作战<\title> 
+       <script>
+               var num=0;
+               function cl()
+               {
+                       num+=1;
+                       upd();
+               }
+       <\script>
+       <body>
+               <p>你有:</p><p id="num">0</p><p> 个细菌。<\p>
+               <button onclick="cl()">获取一个细菌</button>
+       <\body>
+<\html>
