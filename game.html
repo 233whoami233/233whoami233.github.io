@@ -8,10 +8,14 @@
                             num+=1;
                             upd();
                      }
+                     function upd()
+			{
+				document.getElementById("score").innerHTML=num;
+                     }
               </script>
        </head>
        <body>
-               <p>你有:</p><p id="num">0</p><p> 个细菌。<\p>
+               <p>你有:</p><p id="score">0</p><p> 个细菌。</p>
                <button onclick="cl()">获取一个细菌</button>
        </body>
 </html>
