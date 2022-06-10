@@ -2,9 +2,9 @@
        <head>
               <title>细菌</title>
               <script>
-                     var num=[0.0,0.0];
-		     var cost=[10.0];
-		     var bring=[1.0];
+                     var num=[0.0,0.0,0.0];
+		     var cost=[10.0,80.0];
+		     var bring=[1.0,10.0];
                      function cl1()
                      {
                             num[0]+=1;
@@ -20,17 +20,31 @@
 			    }
                             upd();
                      }
+		     function cl3()
+                     {
+                            if(num[0]>=cost[1])
+			    {
+				    num[2]+=1;
+				    num[0]-=cost[1];
+				    cost[1]*=1.5;
+			    }
+                            upd();
+                     }
 		     function pl()
 		     {
 			    num[0]+=num[1];
+			    num[0]+=num[2]*10;
 			    upd();
 		     }
                      function upd()
 		     {
 			     document.getElementById("score1").innerHTML=num[0];
 			     document.getElementById("score2").innerHTML=num[1];
+			     document.getElementById("score3").innerHTML=num[2];
 			     document.getElementById("cost1").innerHTML=cost[0];
+			     document.getElementById("cost2").innerHTML=cost[1];
 			     document.getElementById("num1").innerHTML=bring[0];
+			     document.getElementById("num2").innerHTML=bring[1];
                      }
               </script>
        </head>
@@ -41,11 +55,17 @@
                <p>你有:</p><p id="score1">0</p><p> 个细菌。</p><br>
                <button onclick="cl1()">分离一个细菌</button><br>
 	       <br>
+	       <br>
 	       <p>你有:</p><p id="score2">0</p><p> 个培养皿。</p><br>
 	       <button onclick="cl2()">搭建一个培养皿。</button><br>
-	       <p>你需要花费 </p><p id="cost1">10</p><p> 个细菌。</p><br>
+	       <p>你需要花费 </p><p id="cost1">10</p><p> 个细菌来搭建一个培养皿。</p><br>
 	       <p>一个培养皿每秒可以生产 </p><p id="num1">1.0</p><p> 个细菌。</p><br>
 	       <br>
+	       <br>
+	       <p>你有:</p><p id="score3">0</p><p> 个腐烂的苹果。</p><br>
+	       <button onclick="cl3()">抢一个腐烂的苹果。</button><br>
+	       <p>你需要牺牲 </p><p id="cost2">80</p><p> 个细菌来抢夺一个腐烂的苹果。</p><br>
+	       <p>每个腐烂的苹果上每秒可以生长 </p><p id="num2">10</p><p> 个苹果。</p><br>
 	       <script>
 		       setInterval(function() {
 			       pl();
