@@ -8,6 +8,7 @@
 		     var armycost1=[10.0];
 		     var armycost2=[1000.0];
 		     var bring=[1.0,10.0,100.0];
+		     var log=0.0;
                      function cl1()
                      {
                             num[0]+=1;
@@ -88,6 +89,7 @@
 			    num[0]+=num[2]*10;
 			    num[0]+=num[3]*100;
 			    num[0]-=num[4]*10;
+			    log+=num[4];
 			    upd();
 		     }
                      function upd()
@@ -105,7 +107,7 @@
 			     document.getElementById("army1").innerHTML=armynum[0];
 			     document.getElementById("aca1").innerHTML=armycost1[0];
 			     document.getElementById("acb1").innerHTML=armycost2[0];
-			     document.getElementById("hid2").innerHTML=num[4];
+			     document.getElementById("hid2").innerHTML=log;
                      }
 	       </script>
        </head>
