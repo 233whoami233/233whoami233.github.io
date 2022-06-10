@@ -24,7 +24,6 @@
 			    num[0]+=num[1];
 			    upd();
 		     }
-		     setInterval(pl(),1000);
                      function upd()
 		     {
 			     document.getElementById("score1").innerHTML=num[0];
@@ -36,7 +35,7 @@
        <body>
                <p>你有:</p><p id="score1">0</p><p> 个细菌。</p><br>
                <button onclick="cl1()">获取一个细菌</button><br>
-	       
+	       setInterval(pl(),1000);
 	       <p>你有:</p><p id="score2">0</p><p> 个培养皿。</p><br>
 	       <button onclick="cl2()">获取一个培养皿</button><br>
 	       <p>需要花费</p><p id="cost1">10</p><p>个细菌。</p><br>
