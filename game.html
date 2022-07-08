@@ -8,9 +8,10 @@
 		     var armycost1=[10.0];
 		     var armycost2=[1000.0];
 		     var bring=[1.0,10.0,100.0];
-		     var log=0.0;block
+		     var log=0.0;
 		     var pd=["pd1","pd2","pd3","pd4","pd5","pd6","pd7","pd8","pd9","pd10","pd11","pd12","pd13","score2","cost1","num1"];
 		     var xj=["xj1","xj2","xj3","xj4","xj5","xj6","xj7","score1"];
+		     var pg=["pg1","pg2","pg3","pg4","pg5","pg6","pg7","pg8","pg9","pg10","pg11","pg12","pg13","score3","cost2","num2"];
                      function cl1()
                      {
                             num[0]+=1;
@@ -137,12 +138,12 @@
 	       <p id="pd5" style="block">一个培养皿每秒可以生产 </p><p id="num1" style="block">1</p><p id="pd6" style="block"> 个细菌。</p><br id="pd10" style="block">
 	       <br id="pd11" style="block">
 	       <br id="pd12" style="block">
-	       <p>你有:</p><p id="score3">0</p><p> 个腐烂的苹果。</p><br>
-	       <button onclick="cl3()">抢一个腐烂的苹果</button><br>
-	       <p>你需要牺牲 </p><p id="cost2">80</p><p> 个细菌来抢夺一个腐烂的苹果。</p><br>
-	       <p>每个腐烂的苹果上每秒可以生长 </p><p id="num2">10</p><p> 个细菌。</p><br>
-	       <br>
-	       <br>
+	       <p id="pg1" style="display:none">你有:</p><p id="score3" style="display:none">0</p><p id="pg2" style="display:none"> 个腐烂的苹果。</p><br id="pg3" style="display:none">
+	       <button onclick="cl3()" id="pg4" style="display:none">抢一个腐烂的苹果</button><br id="pg5" style="display:none">
+	       <p id="pg6" style="display:none">你需要牺牲 </p><p id="cost2" style="display:none">80</p><p id="pg7" style="display:none"> 个细菌来抢夺一个腐烂的苹果。</p><br id="pg8" style="display:none">
+	       <p id="pg9" style="display:none">每个腐烂的苹果上每秒可以生长 </p><p id="num2">10</p><p id="pg10" style="display:none"> 个细菌。</p><br id="pg11" style="display:none">
+	       <br id="pg12" style="display:none">
+	       <br id="pg13" style="display:none">
 	       <p>你有:</p><p id="score4">0</p><p> 个松鼠的尸体。</p><br>
 	       <button onclick="cl5()">进攻一只松鼠</button><br>
 	       <p>你需要 </p><p id="cost3">5</p><p> 个战斗细菌来进攻并让其死亡。</p><br>
